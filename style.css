@@ -176,7 +176,16 @@ body {
   border-radius: 5px;
   max-width: 350px;
   width: 100%;
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+  /* transition: all 0.5 ease; */
+}
+
+.result-box.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .result-box .won-text {
@@ -188,6 +197,7 @@ body {
 .result-box .won-text span {
   font-weight: 700;
   margin: 0 3px;
+  text-transform: capitalize;
 }
 
 .result-box .btn {
