@@ -17,6 +17,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
 }
 
 /* Select section styles */
@@ -26,7 +27,13 @@ body {
   border-radius: 10px;
   max-width: 330px;
   width: 100%;
-  /* display: none; */
+  transition: all 0.5s ease;
+}
+
+.select-box.hide {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
 }
 
 .select-box header {
@@ -72,7 +79,16 @@ body {
 
 /* Board CSS */
 .playboard {
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+  /* transition: all 0.5 ease; */
+}
+
+.playboard.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .playboard .details {
@@ -99,6 +115,7 @@ body {
   cursor: default;
   position: relative;
   z-index: 5;
+  transition: all 0.5s ease;
 }
 
 .playboard .details span:first-child {
@@ -114,10 +131,23 @@ body {
   background-color: black;
   border-radius: 5px;
   z-index: 2;
+  transition: all .3s ease;
 }
 
 .playboard .play-area {
   margin-top: 20px;
+}
+
+.players.active span:first-child {
+  color: black;
+}
+
+.players.active span:nth-child(2) {
+  color: white;
+}
+
+.players.active .slider {
+  left: 50%;
 }
 
 .playboard section {
@@ -132,6 +162,7 @@ body {
   background: white;
   border-radius: 5px;
   font-size: 45px;
+  font-weight: 900;
   text-align: center;
   line-height: 80px;
 }
@@ -147,6 +178,7 @@ body {
   width: 100%;
   display: none;
 }
+
 .result-box .won-text {
   font-size: 25px;
   font-weight: 500;
@@ -181,4 +213,5 @@ body {
   transform: scale(0.96);
   box-shadow: none;
 }
+
 /* End */
