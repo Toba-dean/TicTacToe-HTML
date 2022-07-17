@@ -1,0 +1,184 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+.playboard,
+.select-box,
+.result-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Select section styles */
+.select-box {
+  background-color: white;
+  padding: 20px 25px 25px;
+  border-radius: 10px;
+  max-width: 330px;
+  width: 100%;
+  /* display: none; */
+}
+
+.select-box header {
+  font-size: 23px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.select-box .content .title {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 20px 0;
+}
+
+.select-box .content .options {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.select-box .options button {
+  width: 45%;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 0;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 2px 5px 10px gray;
+  transition: all 0.5s ease;
+}
+
+.select-box .options button:active {
+  transform: scale(0.96);
+  box-shadow: none;
+}
+
+/* End */
+
+/* Board CSS */
+.playboard {
+  display: none;
+}
+
+.playboard .details {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.playboard .details .players {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+
+.playboard .details span {
+  padding: 7px 0;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: default;
+  text-align: center;
+  cursor: default;
+  position: relative;
+  z-index: 5;
+}
+
+.playboard .details span:first-child {
+  color: white;
+}
+
+.playboard .details .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background-color: black;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.playboard .play-area {
+  margin-top: 20px;
+}
+
+.playboard section {
+  display: flex;
+}
+
+.playboard section span {
+  display: block;
+  margin: 2px;
+  height: 80px;
+  width: 80px;
+  background: white;
+  border-radius: 5px;
+  font-size: 45px;
+  text-align: center;
+  line-height: 80px;
+}
+
+/* End */
+
+/* Result styles */
+.result-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 350px;
+  width: 100%;
+  display: none;
+}
+.result-box .won-text {
+  font-size: 25px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.result-box .won-text span {
+  font-weight: 700;
+  margin: 0 3px;
+}
+
+.result-box .btn {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.result-box .btn button {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  box-shadow: 2px 5px 10px gray;
+  transition: all 0.5s ease;
+}
+
+.result-box .btn button:active {
+  transform: scale(0.96);
+  box-shadow: none;
+}
+/* End */
